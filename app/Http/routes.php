@@ -15,5 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/test',function(){
+	$output = shell_exec('whoami');
+	echo "<pre>$output</pre>";
 	return "ok";
 });
